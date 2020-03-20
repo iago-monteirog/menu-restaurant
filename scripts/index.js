@@ -1,4 +1,5 @@
 const addItems = document.querySelector('.add-items');
+const otherBtn = document.querySelector('.others');
 const itemsList = document.querySelector('.plates');
 const items = JSON.parse(localStorage.getItem('items')) || [];
 
@@ -38,6 +39,11 @@ function toggleDone(e) {
     // console.log(e.target);
 };
 
+function clearItems(e) {
+     console.log('Hello');
+}
+
+otherBtn.addEventListener('click', clearItems);
 addItems.addEventListener('submit', addItem);
 itemsList.addEventListener('click', toggleDone);
 
